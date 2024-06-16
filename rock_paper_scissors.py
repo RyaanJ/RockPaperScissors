@@ -2,7 +2,7 @@ import random
 
 user_wins = 0
 computer_wins = 0
-
+#Stores rock paper scissors as elements in a list for simplicity in later code
 options = ["rock", 'paper', 'scissors']
 print("Welcome to Rock, Paper, Scissors!")
 while True:
@@ -35,20 +35,21 @@ while True:
         print("You won!")
         user_wins += 1
         continue
-
+#Since all 3 victory cases are accounted for, we can simply use a else to account for all cases where the computer wins
     else:
         print("Computer Wins!")
         computer_wins += 1
         continue
     
 print("\nGame Over, Results are below: \n")
+#Prints final result of who wins overall
 if user_wins > computer_wins:
     print("Well played, you beat the computer!")
 elif computer_wins > user_wins:
     print("You lost, better luck next time!")
 else:
     print("You both tied!")
-
+#Next two if statements are to fix grammar errors when printing final # of wins for computer and user
 if user_wins == 0 or user_wins >= 2:
     print(f"You won {user_wins} times!")
 else:
