@@ -21,5 +21,39 @@ while True:
     computer_pick = options[random_number]
     print(f"Computer Picked: {computer_pick}.")
 
+    if user_input == "rock" and computer_pick == "scissors":
+        print("You won!")
+        user_wins += 1
+        continue
 
-print("Goodbye")
+    if user_input == "paper" and computer_pick == "rock":
+        print("You won!")
+        user_wins += 1
+        continue
+
+    if user_input == "scissors" and computer_pick == "paper":
+        print("You won!")
+        user_wins += 1
+        continue
+
+    if user_input == "scissors" and computer_pick == "rock":
+        print("You lost!")
+        computer_wins += 1
+        continue
+
+    if user_input == "rock" and computer_pick == "paper":
+        print("You lost!")
+        computer_wins += 1
+        continue
+
+    if user_input == "paper" and computer_pick == "scissors":
+        print("You lost!")
+        computer_wins += 1
+        continue
+
+    
+       
+print(f"You won {user_wins} times!")
+print(f"Computer won {computer_wins} times!")
+
+print("Goodbye! ")
